@@ -1,1 +1,19 @@
+<!-- <app-nav></app-nav> -->
+<div class="container" id="bbd">
 
+  
+    <div class="container">
+      <h2>This page displays a few of famous quotes in the world<br>
+      you can vote for your famous quotes or also add your favourite quote</h2>
+    </div>
+    <div class="card" id="qs" *ngFor="let quote of quotes;let i=index">
+        <p>{{quote.quote}}<em>{{quote.author}}</em><br>
+            <button   mat-raised-button id="icons" (click)='likesButtonClick(i)'>like </button>{{quote.likes}}
+            <button  mat-raised-button id="icons" (click) ='dislikeButtonClick(i)'>dislike </button> {{quote.dislikes}}
+            <button mat-raised-button color='warn' id="icons" >delete</button>
+          </div>
+          <div>
+            <app-add-quote [createQuote]="quoteFunc"></app-add-quote>
+          </div>    
+    
+</div>
